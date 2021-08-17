@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "chipflasher": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628160145,
+        "narHash": "sha256-/jjQwQOy14sO0STGkyPrUwBQUmv3KTFZ31TrWetb2ms=",
+        "ref": "master",
+        "rev": "5c057a4168cb33059a1a25421e00c179b39b2275",
+        "revCount": 2742,
+        "type": "git",
+        "url": "git://zerocat.org/zerocat/projects/chipflasher"
+      },
+      "original": {
+        "type": "git",
+        "url": "git://zerocat.org/zerocat/projects/chipflasher"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1627805549,
+        "narHash": "sha256-+LHhcpzw6vAxF6q0VSLkZSEGpDC02JN21KM8eUWz+is=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "16bf3980bfa0d8929639be93fa8491ebad9d61ec",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-21.05",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-old": {
+      "locked": {
+        "lastModified": 1599762933,
+        "narHash": "sha256-9BZCrpJL3K3JcXPJqvAEgr1oIi8QHwg9mbNa6XeUUog=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a45e68be364d751414a406bf78fadf9b60f8c606",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "a45e68be364d751414a406bf78fadf9b60f8c606",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "chipflasher": "chipflasher",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-old": "nixpkgs-old"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

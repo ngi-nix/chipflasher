@@ -1,0 +1,13 @@
+diff --git a/hardware/Makefile b/hardware/Makefile
+index 32721a63..3e43a6d9 100644
+--- a/hardware/Makefile
++++ b/hardware/Makefile
+@@ -141,7 +141,7 @@ GSCHEM_ATTRIBS                := $(ROOT_GSCHEM)attribs
+ GNETLIST_RULE                 := $(ROOT_GSCHEM)rules-drc.scm
+ 
+ # Settings
+-INKSCAPE_REQUIRED             := Inkscape 0.92.4 (5da689c313, 2019-01-14)
++INKSCAPE_REQUIRED             := Inkscape 0.92.5 (2060ec1f9f, 2020-04-08)
+ INKSCAPE_VERSION              := $(shell $(strip \
+ 	$(INKSCAPE) $(INKSCAPEFLAGS) \
+ 		--version; \
