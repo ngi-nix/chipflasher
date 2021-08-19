@@ -72,20 +72,38 @@
             mv doc/generated-documentation/ $out/share
           '';
         };
+
+        chipflasher = with final; stdenv.mkDerivation {
+          pname = "chipflasher";
+          inherit version;
+
+          src = chipflasher;
+
+          buildInputs = [
+            git
+            # FIXME: needs something for `propeller-elf-gcc`
+          ];
+
+          buildPhase = ''
+            make -C host/src/
+          '';
+        };
       };
 
       packages = forAllSystems (system: {
         inherit (nixpkgsFor.${system})
+          chipflasher
           chipflasher-doc
           geda
           inkscape_0
           ;
       });
 
-      defaultPackage = forAllSystems (system: self.packages.${system}.chipflasher-doc);
+      defaultPackage = forAllSystems (system: self.packages.${system}.chipflasher);
 
       checks = forAllSystems (system: {
         inherit (self.packages.${system})
+          chipflasher
           chipflasher-doc
           geda
           inkscape_0
